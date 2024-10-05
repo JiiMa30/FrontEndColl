@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML 属性</title>
+    <link rel="stylesheet" href="index.html" />
+
+    <style>
+      p {
+        color: blue;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="../js/index.js"></script>
+    <p>Large Blue</p>
+    <a style="color: brown" href="index.html">This is a link</a>
+    <br />
+    换行
+    <a href="index.html" target="_blank">Open in a new page</a>
+    <hr />
+    水平线<br />
+    <img src="../resource/backgroud.jpeg" alt="该图片无法显示" width="800" />
+
+    <div class="nav-bar">
+      <a href=""></a>
+    </div>
+    <div class="content"></div>
+    <h1>文章内容</h1>
+
+    <span>这是一个span <a href="index.html">连接到index</a></span>
+
+    <form action="" method="">
+      <span
+        >用户名:
+        <input type="text" placeholder="请输入内容, placeholder用于提示"
+      /></span>
+      <br />
+      <label for="password">密码</label>
+      <input id="password" type="text" value="默认内容" />
+      <br /><br />
+
+      <label>性别</label>
+      <input type="radio" name="gender" id="" /> male
+      <input type="radio" name="gender" id="" /> female
+
+      <br />
+      <br />
+      <label>爱好</label>
+      <input type="checkbox" name="hobby" /> 爱好1
+      <input type="checkbox" name="hobby" /> 爱好2
+      <input type="checkbox" name="hobby" /> 爱好3 <br /><br />
+      <label>
+        上传文件
+        <input type="file" name="file" />
+      </label>
+      <br /><br />
+
+      <label for=""></label>
+      <input type="submit" value="上传" />
+    </form>
+
+    <script>
+      console.log("内联发送");
+      var y = 10;
+      if (true) {
+        console.log("y :>> ", y);
+      }
+      sum = (x, y) => {
+        return x + y;
+      };
+      console.log(sum(x, y));
+
+      // 一次DOM和Method的尝试
+    </script>
+    <label for="name">Name Input</label><br />
+    <input type="text" name="" id="myInput" /><br />
+    <label for="result">Name Output</label><br />
+    <input type="text" name="" id="result" />
+    <script>
+      const inputElement = document.getElementById("myInput");
+      const resultElement = document.getElementById("result");
+
+      const originalValue = inputElement.value;
+
+      function handleInputChange(event, entity, result) {
+        const currentValue = entity.value;
+        const newValue = currentValue + "!";
+        console.log("newValue :>> ", newValue);
+        result.value = newValue;
+        // entity.value = newValue;
+      }
+      inputElement.addEventListener("input", (event) => {
+        handleInputChange(event, inputElement, resultElement);
+      });
+    </script>
+  </body>
+</html>
